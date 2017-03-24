@@ -31,9 +31,8 @@ namespace Ch24Ex04
 
             WriteLine($"Идентификатор задачи task01: {task01.Id}");
             WriteLine($"Идентификатор задачи task02: {task02.Id}");
-
-            task01.Wait();
-            task02.Wait();
+            
+            Task.WaitAll(task01, task02);
 
             WriteLine("Основной поток завершён.");
         }
