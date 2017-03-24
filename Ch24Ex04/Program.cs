@@ -34,7 +34,7 @@ namespace Ch24Ex04
             task01.Start();
             task02.Start();
             
-            Task.WaitAll(task01, task02);
+            Task.WaitAny(task01, task02);
 
             WriteLine("Основной поток завершён.");
         }
